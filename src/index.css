@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #FF6B35;
+  --color-background: #1E0B33;
+  --color-surface: #2D1747;
+  --color-text: #F5F5F5;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.filter-button {
+  @apply px-4 py-2 rounded-full text-sm font-medium transition-colors;
+}
+
+.filter-button.active {
+  @apply bg-primary text-white;
+}
+
+.filter-button:not(.active) {
+  @apply bg-surface text-gray-300 hover:bg-opacity-80;
+}
+
+.price-button {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center text-sm font-medium transition-colors;
+}
+
+.price-button.active {
+  @apply bg-primary text-white;
+}
+
+.price-button:not(.active) {
+  @apply bg-surface text-gray-300 hover:bg-opacity-80;
+}
